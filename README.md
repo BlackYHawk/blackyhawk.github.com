@@ -1,2 +1,2 @@
-# blackyhawk.github.com
+# blackyhawk.github.io
 Github pages
