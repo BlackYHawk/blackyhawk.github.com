@@ -6,6 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username: BlackYHawk 
 
+
 #upyun source
 static_url: "http://jerryblog-image.b0.upaiyun.com/blog"
 
