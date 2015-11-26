@@ -1,5 +1,36 @@
-title:	Black Hawk
-owner:	何勇
-description:	>编程是工作，也是生活。
-baseurl:	"/hawk"
+# Site settings
+title: Black Hawk
+email: leqinde@163.com
+description: > # 编程是工作，更是生活。 
+baseurl: "" # the subpath of your site, e.g. /blog
+# url: "http://yourdomain.com" # the base hostname & protocol for your site
+github_username: BlackYHawk 
 
+#upyun source
+static_url: "http://jerryblog-image.b0.upaiyun.com/blog"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlighter: pygments
+paginate: 7
+paginate_path: ":num/"
+gems: [jekyll-paginate]
+
+# default Front matter
+defaults:
+  -
+    scope:
+      path: pages
+      type: pages
+    values:
+      layout: page
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      copyright: true
+      duoshuo_comment: true
+      release: true
