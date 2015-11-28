@@ -4,7 +4,7 @@ owner: Black Hawk
 email: leqinde@163.com
 description: > # 编程是工作，更是生活。 
 baseurl: "" # the subpath of your site, e.g. /blog
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://blackyhawk.github.io" # the base hostname & protocol for your site
 github_username: BlackYHawk 
 
 
