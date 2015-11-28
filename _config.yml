@@ -1,5 +1,6 @@
 # Site settings
 title: Black Hawk
+owner: Black Hawk
 email: leqinde@163.com
 description: > # 编程是工作，更是生活。 
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -8,7 +9,7 @@ github_username: BlackYHawk
 
 
 #upyun source
-static_url: "http://jerryblog-image.b0.upaiyun.com/blog"
+static_url: "http://7xoqod.com1.z0.glb.clouddn.com"
 
 # Build settings
 markdown: kramdown

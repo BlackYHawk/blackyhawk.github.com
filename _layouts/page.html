@@ -11,4 +11,8 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.duoshuo_comment %}
+    {% include duoshuo.html %}
+  {% endif %}
+
 </article>
