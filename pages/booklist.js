@@ -4,19 +4,19 @@
     var i, tags = {
         "显示全部": 999999
     };
-    for (i = 0; i < $J.labels.length; i++) {
-        var t = tags[$J.labels[i]];
-        tags[$J.labels[i]] = t ? t+1 : 1;
+    for (i = 0; i < $booklist.labels.length; i++) {
+        var t = tags[$booklist.labels[i]];
+        tags[$booklist.labels[i]] = t ? t+1 : 1;
     }
 
-    $J.labels = [];
+    $booklist.labels = [];
     for (var tag in tags) {
-        $J.labels.push({
+        $booklist.labels.push({
             name: tag,
             value: tags[tag]
         });
     }
-    $J.labels.sort(function(a, b){
+    $booklist.labels.sort(function(a, b){
         return b.value - a.value;
     });
 
@@ -29,9 +29,9 @@
             return results[1] || 0;
         }
     };
-    $J.currentLabel = decodeURI($.urlParam("label"));
-    if ($J.currentLabel === 'null') {
-        $J.currentLabel = null;
+    $booklist.currentLabel = decodeURI($.urlParam("label"));
+    if ($booklist.currentLabel === 'null') {
+        $booklist.currentLabel = null;
     }
 
     function simpleClone(obj) {
@@ -44,7 +44,7 @@
     var LabelList = React.createClass({
         getInitialState: function() {
             return {
-                labels: simpleClone($J.labels)
+                labels: simpleClone($booklist.labels)
             };
         },
         handleClick: function(i, app, e) {
@@ -53,7 +53,7 @@
             app.setState({
                 selected: nextSelected
             });
-            window.history.replaceState({}, '', $J.baseUrl + nextSelected);
+            window.history.replaceState({}, '', $booklist.baseUrl + nextSelected);
         },
         render: function() {
             var list = this,
@@ -106,7 +106,7 @@
     var PostList = React.createClass({
         getInitialState: function() {
             return {
-                posts: simpleClone($J.posts),
+                posts: simpleClone($booklist.posts),
                 searchContent: ''
             };
         },
@@ -139,7 +139,7 @@
                     <h2>文章列表</h2>
                     <input onChange={this.searchHandler} className="search-box" type="text" placeholder="搜索包含在标题中的关键词" />
                     <div className="search-icon">
-                        <img src={$J.staticUrl + "/search_icon.png"}/>
+                        <img src={$booklist.staticUrl + "/search_icon.png"}/>
                     </div>
                     <hr/>
                     <ul className="articles">{this.state.posts.map(createPost)}</ul>
@@ -151,7 +151,7 @@
     var ArticlesApp = React.createClass({
         getInitialState: function() {
             return {
-                selected: $J.currentLabel || '显示全部'
+                selected: $booklist.currentLabel || '显示全部'
             };
         },
         render: function() {

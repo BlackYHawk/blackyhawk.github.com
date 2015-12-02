@@ -7,6 +7,11 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}<span class="pause"> - </span>
         浏览量：<span id="visit-counter"></span>次<span class="pause"> | </span>
+        {% if page.labels %}
+            {% for label in page.labels %}
+                <a class="label" href="{{ site.baseurl }}/booklist/?label={{ label }}">{{ label }}</a>
+            {% endfor %}
+        {% endif %}
     </p>
   </header>
 

@@ -17,7 +17,7 @@ permalink: pretty
 highlighter: pygments
 paginate: 7
 paginate_path: ":num/"
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, pages]
 
 # default Front matter
 defaults:
