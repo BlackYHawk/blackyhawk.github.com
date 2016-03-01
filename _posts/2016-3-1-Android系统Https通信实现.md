@@ -1,7 +1,7 @@
 ---
 date: 2016-3-1  UTC
 title: Android系统Https通信实现
-description: 对Android系统Https通信的概述及代码实现
+description: HTTPS，是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL...
 permalink: /posts/learn/
 key: 10004
 labels: [Android]
